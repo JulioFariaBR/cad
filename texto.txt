@@ -1,0 +1,24 @@
+const canvaLog = document.querySelector('#log');
+
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+function logCanva(type, mensage) {
+    let dataFull = new Date();
+    let hrs = dataFull.getHours();
+    let min = dataFull.getMinutes();
+    let sec = dataFull.getSeconds();
+    let year = dataFull.getFullYear();
+    let month = dataFull.getMonth()+1;
+    let day = dataFull.getDate();
+    let date = (`${day}/${month}/${year} - ${hrs}:${min}:${sec}`);
+    let mensagem = `${date} || ${mensage}`
+    if (type == 'error') {
+        canvaLog.innerHTML = canvaLog.innerHTML + `<p class="error">${mensagem}</p>` 
+    } else if (type == 'alert') {
+        canvaLog.innerHTML = canvaLog.innerHTML + `<p class="alert">${mensagem}</p>`         
+    } else {
+        canvaLog.innerHTML = canvaLog.innerHTML + `<p class="normal">${mensagem}</p>` 
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Projetos Scratch</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="section__form cadastro none" id="cad">
+        <div class="section__form cadastroForm">
+            <fieldset class="section__form--fieldset">
+                <label for="nomeCad" class="section__form--label">Nome:</label>
+                <input type="text" name="" id="nomeCad" class="input">
+            </fieldset>
+            <fieldset class="section__form--fieldset">
+                <label for="userCad" class="section__form--label">Usuário:</label>
+                <input type="text" name="" id="userCad" class="input">
+            </fieldset>
+            <fieldset class="section__form--fieldset">
+                <label for="serieCad" class="section__form--label">Série:</label>
+                <input type="text" name="" id="serieCad" class="input">
+            </fieldset>
+            <fieldset class="section__form--fieldset">
+                <label for="anoCad" class="section__form--label">Ano:</label>
+                <input type="text" name="" id="anoCad" class="input">
+            </fieldset>
+        </div>
+        <button class="bnt bntCadA" onclick="cadastrar()">Cadastrar</button>
+        <button class="bnt bntCadB" onclick="cancelarCad()">Cancelar</button>
+    </section>
+    <section class="section__form">
+        <form id="consultaForm" class="section__form">
+            <fieldset class="section__form--fieldset">
+                <label for="username" class="section__form--label">Digite o nome de usuário:</label>
+                <input type="text" id="username" required class="section__form--input username input">
+                <button type="button" onclick="consultarProjetos()" class="bnt">Consultar</button>
+            </fieldset>
+            <fieldset class="section__form--fieldset">
+                <label for="autor" class="section__form--label">Autor:</label>
+                <input type="text" name="" id="autor" class="section__form--input ano input">
+            </fieldset>
+            <fieldset class="section__form--fieldset">
+                <label for="serie" class="section__form--label">Série:</label>
+                <input type="number" name="" id="serie" class="section__form--input serie input">
+            </fieldset>
+            <fieldset class="section__form--fieldset">
+                <label for="ano" class="section__form--label">Ano:</label>
+                <input type="text" name="" id="ano" class="section__form--input ano input">
+            </fieldset>
+        </form>
+        <button type="button" onclick="submit()" class="bnt">Enviar dados selecionados</button>
+        <div id="resultado" class="resultado"></div>
+    </section>
+    <section class="section__lista">
+        <button onclick="cadastrarNovoUsuario(this)" class="bnt">Cadastrar Novo Usuário</button>
+        <button onclick="carregarLista(this)" class="bnt">Carregar Lista</button>
+        <select name="" id="select-turma" class="inputn">
+            <option value="8" class="option">8º A</option>
+            <option value="9" class="option">9º A</option>
+            <option value="1" class="option">1º A</option>
+        </select>
+        <div id="users" class="lista">
+        </div>
+    </section>
+    <script src="js/script-e.js"></script>
+    <script src="js/script-a.js"></script>
+    <script src="js/script-b.js"></script>
+    <script src="js/script-c.js"></script>
+    <script src="js/script-d.js"></script>
+    <script src="js/script-f.js"></script>
+
+</body>
+
+</html>
